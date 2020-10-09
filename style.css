@@ -1,0 +1,26 @@
+html {
+  height: auto;
+}
+body {
+  background-color:pink;
+  background-image: url(img/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header {
+  background-color: lightblue;
+  font-family: sans-serif
+}
+nav {
+background-color: lightgray;
+height: 50px;;
+text-align: right;
+  scroll-padding:auto ;
+}
+
+
+
+footer {
+  background-color: lightblue;
+}
