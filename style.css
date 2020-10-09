@@ -1,26 +1,91 @@
-html {
+* {
   height: auto;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
-  background-color:pink;
-  background-image: url(img/background.jpeg);
-  background-size: cover;
+  background-color: #f5c6d3;
+  /* background-image: url(img/background.jpeg); */
+  /* background-size: cover; */
   background-repeat: no-repeat;
   background-position: center;
 }
+
+button {
+  background-color: #1f96b7;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+/* LOGO AND NAV BAR */
+
+#logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px !important;
+}
+
 header {
-  background-color: lightblue;
-  font-family: sans-serif
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  flex-shrink: 0;
 }
+
 nav {
-background-color: lightgray;
-height: 50px;;
-text-align: right;
-  scroll-padding:auto ;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  font-family: 'Gochi Hand', cursive;
+  padding-left: 50%;
 }
 
+/* TODO: Add media query for mobile */
 
+/* HOME */
+main {
+  height: 800px;
+  background: url(img/hero-background.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  display:grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas:
+    ". ."
+    ". cta"
+    ". ."
+}
 
-footer {
-  background-color: lightblue;
+main * {
+  color: black;
+}
+
+main > h1 {
+  font-size: 56px;
+}
+main > h2 {
+  font-size: 32px;
+}
+main > button {
+  font-size: 24px;
+}
+
+#call-to-action {
+  grid-area: cta;
 }
