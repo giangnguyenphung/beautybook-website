@@ -8,22 +8,24 @@
   <title>Beauty Book</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
   <header>
-    <h1 id="logo">BeautyBook</h1>
+    <a id="logo" href="#home">BeautyBook</a>
     <nav>
-      <a href="#">home</a>
-      <a href="#">features</a>
-      <a href="#">about us</a>
-      <a href="#">contact us</a>
+      <a href="#home">home</a>
+      <a href="#features">features</a>
+      <a href="#about">about us</a>
+      <a href="#contact">contact us</a>
       <a href="#">sign in </a>
     </nav>
   </header>
 
-  <main>
+  <main id="home">
+
     <div id="call-to-action">
       <h1>All-in-one beauty salon payroll management</h1>
       <h2>Don't be stuck using tedious paper and pencil.</h2>
@@ -34,35 +36,45 @@
 
   <!-- HOME -->
 
-  <section id="home">
-  </section>
+
 
   <!-- FEATURES -->
   <section id="features">
-    <h2>Team members will love it</h2>
-    <p>Instantly can view earnings</p>
-    <p>Raise any problems if they see it</p>
-    <p>See historical and tax documents</p>
-    <h2>It Makes Your Life Easier</h2>
-    <p>Clean dashboard to view total earnings</p>
-    <p>Understand sales per employee</p>
-    <p>Centralize all payroll to one easy-to-use system</p>
-    <h2>Receptionists Can Focus on Customers</h2>
-    <p>No more staying late to calculate total earnings</p>
-    <p>Can focus all attention on making sure clients are satisfied</p>
-    <p>Ensures a great experience for clients</p>
+    <div id="fea0"><h2>Features</h2></div>
+    <div id="fea1">
+      <h3><b>Team members will love it</b></h3>
+      <p>Instantly can view earnings</p>
+      <p>Raise any problems if they see it</p>
+      <p>See historical and tax documents</p>
+    </div>
+    <div id="fea2">
+      <h3>It Makes Your Life Easier</h3>
+      <p>Clean dashboard to view total earnings</p>
+      <p>Understand sales per employee</p>
+      <p>Centralize all payroll to one easy-to-use system</p>
+    </div>
+    <div id="fea3">
+      <h3>Receptionists Can Focus on Customers</h3>
+      <p>No more staying late to calculate total earnings</p>
+      <p>Can focus all attention on making sure clients are satisfied</p>
+      <p>Ensures a great experience for clients</p></div>
+
   </section>
 
+  <!-- CUSTOMER -->
+
   <section>
+    <div id="#customer">
     <h2>Customers</h2> <!-- rotating carosal in v2 -->
     <p>
       <img src="#" alt="Premier Nail Bar">
       <img src="#" alt="HN LLC">
     </p>
+  </div>
   </section>
 
   <!-- ABOUT US -->
-  <section id="about us">
+  <section id="about">
     <p>history of site</p>
     <p>founder subsection </p>
   </section>
@@ -79,7 +91,7 @@
 
   <!-- CONTACT -->
 <footer>
-  <section id="contact us">
+  <section id="contact">
     <p>Have a question? Call us <a href="tel: 281-902-6677">here</a></p>
     <p>or want us to get in touch you soon? Sure!!!</p>
     <form action="usercontact" method="post">
