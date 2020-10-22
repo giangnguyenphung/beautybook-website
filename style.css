@@ -11,6 +11,8 @@
 a {
   text-decoration: none;
   color: white;
+  font-size: 25px;
+
 }
 
 body {
@@ -73,7 +75,7 @@ nav {
 /* HOME */
 
 main {
-  height: 900px;
+  height: 700px;
   background: url(img/hero-background.jpeg) no-repeat center center fixed;
   background-size: cover;
   display: grid;
@@ -113,7 +115,7 @@ main>button {
 */
 
 #features {
-  height: 700px;
+  height: 980px;
   background-size: cover;
   display: grid;
   /* TODO: first row of grid should be smaller */
