@@ -55,6 +55,7 @@ header {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+  text-transform: capitalize;
 }
 
 nav {
@@ -150,10 +151,26 @@ main>button {
   grid-area: feat-three-pic;
 }
 
-#customer {
-  height: 800px;
+#customer-list {
+  height: 600px;
+  display: grid;
 }
 
 #about {
+  height: 600px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+#customer-proof {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 200px;
+  margin-left: 200px;
+}
+
+#contact {
   height: 600px;
 }
