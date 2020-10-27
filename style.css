@@ -74,6 +74,13 @@ nav {
   left: 30%;
 }
 
+#burger div {
+  width: 25px;
+  height: 3px;
+  background-color: pink;
+  margin: 5px;
+}
+
 /* TODO: Add media query for mobile */
 
 /* HOME */
@@ -186,4 +193,8 @@ main>button {
 
 #contact {
   height: 600px;
+}
+
+@media screen and (max-width: 320px) {
+
 }
