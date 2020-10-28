@@ -8,23 +8,19 @@
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-
-}
-
-body {
-  background-color: #f5c6d3;
-  font-family: 'Piazzolla', serif;
-}
+/* HOME */
 
 #home {
   background-image: url(img/background.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (max-width:768px) {
+  #detail {
+    padding: 5px;
+  }
 }
 
 button {
@@ -35,13 +31,6 @@ button {
   display: inline-block;
   font-size: 20px;
   font-family: 'Piazzolla', serif;
-}
-
-h2 {
-  /* TODO: Add formatting for all h2s here: padding top bottom, font size, etc. */
-  padding-top: 5px;
-  text-align: center;
-  grid-area: 'title';
 }
 
 /* LOGO AND NAV BAR */
@@ -61,6 +50,12 @@ header {
   text-transform: capitalize;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -69,7 +64,6 @@ nav {
   background: transparent;
   position: absolute;
   font-family: 'Gochi Hand', cursive;
-  /* padding-left: 60%; */
   width: 70%;
   left: 30%;
 }
@@ -77,13 +71,61 @@ nav {
 #burger div {
   width: 25px;
   height: 3px;
-  background-color: pink;
+  background-color: white;
   margin: 5px;
 }
 
-/* TODO: Add media query for mobile */
+@media screen and (max-width:1300px) {
+  .nav {
+    font-size: 16px;
+  }
+  .nav a {
+    margin: 0px 10px 0px 10px;
+  }
+}
 
-/* HOME */
+@media screen and (max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+  nav {
+    position: absolute;
+    right: 0px;
+    height: 35vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    background-color: black;
+    opacity: 0.5;
+    padding: 0px 0px 20px 0px;
+    margin: 0px 0px 20px 0px;
+  }
+  .nav li {
+    opacity: 0;
+  }
+  .burger {
+    display: block;
+  }
+}
+
+/* BODY */
+
+body {
+  background-color: #f5c6d3;
+  font-family: 'Piazzolla', serif;
+}
+
+h2 {
+  /* TODO: Add formatting for all h2s here: padding top bottom, font size, etc. */
+  padding-top: 5px;
+  text-align: center;
+  grid-area: 'title';
+}
+
+/* MAIN */
 
 main {
   height: 700px;
@@ -125,16 +167,14 @@ main>button {
   - maybe spacing at bottom?
 */
 
+/* FEATURES */
+
 #features {
   height: 980px;
   background-size: cover;
   display: grid;
   /* TODO: first row of grid should be smaller */
-  grid-template-areas:
-  'title               title'
-  'feat-one-text   feat-one-pic'
-  'feat-two-pic    feat-two-text'
-  'feat-three-text feat-three-pic'
+  grid-template-areas: 'title               title' 'feat-one-text   feat-one-pic' 'feat-two-pic    feat-two-text' 'feat-three-text feat-three-pic'
 }
 
 #feat-one-text {
@@ -161,40 +201,48 @@ main>button {
   grid-area: feat-three-pic;
 }
 
+/* CUSTOMER LIST */
+
 #customer-list {
   height: 600px;
   display: grid;
-  background-color:whitesmoke;
+  border-radius: 30%;
+  background-color: whitesmoke;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin-right: 250px;
+  margin-left: 250px;
 }
+
+/* ABOUT */
 
 #about {
   height: 600px;
-
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 20px;
+  margin-bottom: 140px;
   margin-right: 200px;
   margin-left: 200px;
 }
 
-#customer-proof {
-  height: 500px;
-  color:black !important;
+/* CUSTOMER REVIEW */
 
+#customer-proof {
+  height: 600px;
+  background-color: whitesmoke;
   background-repeat: no-repeat;
   background-position: center;
-  margin-top: 100px;
+  border-radius: 30%;
+  margin-top: 70px;
   margin-bottom: 100px;
   margin-right: 250px;
   margin-left: 250px;
 }
 
+/* CONTACT */
+
 #contact {
   height: 600px;
 }
 
-@media screen and (max-width: 320px) {
-
-}
+@media screen and (max-width: 320px) {}
