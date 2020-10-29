@@ -8,36 +8,11 @@
   text-align: center;
 }
 
-/* HOME */
-
-#home {
-  background-image: url(img/background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media screen and (max-width:768px) {
-  #detail {
-    padding: 5px;
-  }
-}
-
-button {
-  background-color: #1f96b7;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 5px;
-  display: inline-block;
-  font-size: 20px;
-  font-family: 'Piazzolla', serif;
-}
-
 /* LOGO AND NAV BAR */
 
 #logo {
   font-family: 'Orbitron', sans-serif;
-  font-size: 48px !important;
+  font-size: 48px;
   padding-left: 5px;
   padding-bottom: 5px;
 }
@@ -68,26 +43,49 @@ nav {
   left: 30%;
 }
 
+.nav-links a:hover {
+  color: #1f96b7 !important;
+  border-bottom: 2px solid;
+}
+
+#burger {
+  display: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
 #burger div {
   width: 25px;
   height: 3px;
   background-color: white;
   margin: 5px;
-}
-
-@media screen and (max-width:1300px) {
-  .nav {
-    font-size: 16px;
-  }
-  .nav a {
-    margin: 0px 10px 0px 10px;
-  }
+  transition: all 0.3s ease;
 }
 
 @media screen and (max-width:768px) {
-  body {
+  #logo {
+    font-size: 38px;
+  }
+  .nav-links {
+    font-size: 16px;
+  }
+  .nav-links a {
+    margin: 0px 10px 0px 10px;
+  }
+  #call-to-action {
+
+  }
+}
+
+@media screen and (max-width:1300px) {
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
     overflow-x: hidden;
   }
+
   nav {
     position: absolute;
     right: 0px;
@@ -103,29 +101,68 @@ nav {
     padding: 0px 0px 20px 0px;
     margin: 0px 0px 20px 0px;
   }
-  .nav li {
+  .nav {
     opacity: 0;
   }
-  .burger {
+  #burger {
     display: block;
   }
 }
 
-/* BODY */
+.nav-active {
+  transform: translateX(0%)
+}
 
-body {
-  background-color: #f5c6d3;
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle #line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle #line2 {
+  opacity: 0;
+}
+
+.toggle #line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.pre-main {
+  transition: 1s;
+}
+
+.past-main {
+  transition: 1s;
+  background: rosybrown;
+}
+
+/* HOME */
+
+#home {
+  background-image: url(img/background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button {
+  background-color: #1f96b7;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 20px;
   font-family: 'Piazzolla', serif;
 }
-
-h2 {
-  /* TODO: Add formatting for all h2s here: padding top bottom, font size, etc. */
-  padding-top: 5px;
-  text-align: center;
-  grid-area: 'title';
-}
-
-/* MAIN */
 
 main {
   height: 700px;
@@ -158,91 +195,98 @@ main>button {
   grid-area: cta;
 }
 
-/* FEATURES
-  - small top bar across the top with "features"
-  - a 2 column by 3 row grid evenly displayed with rest of content
-    - feat-one-text   feat-one-pic
-    - feat-two-pic    feat-two-text
-    - feat-three-text feat-three-pic
-  - maybe spacing at bottom?
-*/
-
-/* FEATURES */
-
-#features {
-  height: 980px;
-  background-size: cover;
-  display: grid;
-  /* TODO: first row of grid should be smaller */
-  grid-template-areas: 'title               title' 'feat-one-text   feat-one-pic' 'feat-two-pic    feat-two-text' 'feat-three-text feat-three-pic'
+h2 {
+  padding-top: 5px;
+  text-align: center;
+  grid-area: 'title';
 }
 
-#feat-one-text {
-  grid-area: feat-one-text;
+@media screen and (max-width:768px) {
+  main h1 {
+    font-size: 26px ;
+  }
+  main h2 {
+    font-size: 15px ;
+  }
+  main>button {
+    font-size: 10px;
+  }
+
 }
 
-#feat-one-pic {
-  grid-area: feat-one-pic;
+/* BODY */
+
+body {
+  background-color: #f5c6d3;
+  font-family: 'Piazzolla', serif;
 }
-
-#feat-two-pic {
-  grid-area: feat-two-pic;
-}
-
-#feat-two-text {
-  grid-area: feat-two-text;
-}
-
-#feat-three-text {
-  grid-area: feat-three-text;
-}
-
-#feat-three-pic {
-  grid-area: feat-three-pic;
-}
-
-/* CUSTOMER LIST */
-
-#customer-list {
-  height: 600px;
-  display: grid;
-  border-radius: 30%;
-  background-color: whitesmoke;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-right: 250px;
-  margin-left: 250px;
-}
-
-/* ABOUT */
-
-#about {
-  height: 600px;
-  margin-top: 20px;
-  margin-bottom: 140px;
-  margin-right: 200px;
-  margin-left: 200px;
-}
-
-/* CUSTOMER REVIEW */
-
-#customer-proof {
-  height: 600px;
-  background-color: whitesmoke;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 30%;
-  margin-top: 70px;
-  margin-bottom: 100px;
-  margin-right: 250px;
-  margin-left: 250px;
-}
-
-/* CONTACT */
-
-#contact {
-  height: 600px;
-}
-
-@media screen and (max-width: 320px) {}
+  /* FEATURES */
+  #features {
+    height: 980px;
+    background-size: cover;
+    display: grid;
+    grid-template-areas:
+    'title               title'
+    'feat-one-text   feat-one-pic'
+    'feat-two-pic    feat-two-text'
+    'feat-three-text feat-three-pic'
+  }
+  #feat-one-text {
+    grid-area: feat-one-text;
+  }
+  #feat-one-pic {
+    grid-area: feat-one-pic;
+  }
+  #feat-two-pic {
+    grid-area: feat-two-pic;
+  }
+  #feat-two-text {
+    grid-area: feat-two-text;
+  }
+  #feat-three-text {
+    grid-area: feat-three-text;
+  }
+  #feat-three-pic {
+    grid-area: feat-three-pic;
+  }
+  @media screen and (max-width:768px) {
+    #features {
+      padding: 15px;
+    }
+    /* CUSTOMER LIST */
+    #customer-list {
+      height: 600px;
+      display: grid;
+      border-radius: 30%;
+      background-color: whitesmoke;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 250px;
+      margin-left: 250px;
+    }
+    /* ABOUT */
+    #about {
+      height: 600px;
+      margin-top: 20px;
+      margin-bottom: 140px;
+      margin-right: 200px;
+      margin-left: 200px;
+    }
+    /* CUSTOMER REVIEW */
+    #customer-proof {
+      height: 600px;
+      background-color: whitesmoke;
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 30%;
+      margin-top: 70px;
+      margin-bottom: 100px;
+      margin-right: 250px;
+      margin-left: 250px;
+    }
+    /* CONTACT */
+    #contact {
+      height: 600px;
+    }
+    @media screen and (max-width: 320px) {}
