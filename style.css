@@ -231,6 +231,10 @@ body {
     'feat-two-pic    feat-two-text'
     'feat-three-text feat-three-pic'
   }
+
+  #features h3 {
+    font-size: 35px;
+  }
   #feat-one-text {
     grid-area: feat-one-text;
   }
@@ -249,8 +253,29 @@ body {
   #feat-three-pic {
     grid-area: feat-three-pic;
   }
-  @media screen and (max-width:768px) {
+  @media screen and (max-width:922px) {
     #features {
+      font-size: 14px;
+      display: inline-grid;
+      grid-template-areas:
+      'title'
+      'feat-one-text'
+      'feat-one-pic'
+      'feat-two-text'
+      'feat-two-pic'
+      'feat-three-text'
+      'feat-three-pic'
+
+  }
+    #features h2 {
+    padding-right: 60% !important;
+    display: block;
+    margin: 0;
+    }
+    #feature h3 {
+      font-size: 14px !important;
+    }
+
 
     }
     /* CUSTOMER LIST */
