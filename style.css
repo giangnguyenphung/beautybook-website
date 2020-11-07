@@ -253,8 +253,14 @@ body {
   #feat-three-pic {
     grid-area: feat-three-pic;
   }
+
+  #features img {
+    height: 250px;
+    width: 250px;
+  }
   @media screen and (max-width:922px) {
     #features {
+      text-align: center;
       font-size: 14px;
       display: inline-grid;
       grid-template-areas:
@@ -275,7 +281,10 @@ body {
     #feature h3 {
       font-size: 14px !important;
     }
-
+    #features img {
+      height: 150px;
+      width: 150px;
+    }
 
     }
     /* CUSTOMER LIST */
