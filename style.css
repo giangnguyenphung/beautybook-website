@@ -199,6 +199,7 @@ h2 {
   padding-top: 5px;
   text-align: center;
   grid-area: 'title';
+  font-size: 38px;
 }
 
 @media screen and (max-width:768px) {
@@ -299,6 +300,23 @@ body {
       margin-right: 250px;
       margin-left: 250px;
     }
+    @media screen and (max-width: 922px) {
+    #customer-list {
+      text-align: center;
+      font-size: 14px;
+      display: inline-grid;
+      border-radius: 30%;
+      background-color: whitesmoke;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-template-areas:
+      'title-cus'
+      'premier'
+      'hoa-ngoc-llc'
+    }
+    }
+
     /* ABOUT */
     #about {
       height: 600px;
