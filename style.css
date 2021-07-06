@@ -1,6 +1,5 @@
 * {
   height: auto;
-  color: white;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -290,13 +289,14 @@ body {
     }
     /* CUSTOMER LIST */
     #customer-list {
+
       height: 600px;
       display: grid;
-      border-radius: 30%;
+      border-radius: 15%;
       background-color: whitesmoke;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      /* background-size: cover; */
+      /* background-repeat: no-repeat; */
+      /* background-position: center; */
       margin-right: 250px;
       margin-left: 250px;
     }
@@ -331,7 +331,7 @@ body {
       background-color: whitesmoke;
       background-repeat: no-repeat;
       background-position: center;
-      border-radius: 30%;
+      border-radius: 15%;
       margin-top: 70px;
       margin-bottom: 100px;
       margin-right: 250px;
